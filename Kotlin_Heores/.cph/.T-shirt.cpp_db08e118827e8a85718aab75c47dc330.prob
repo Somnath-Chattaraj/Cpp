@@ -1,0 +1,1 @@
+{"name":"Local: T-shirt","url":"/Users/somnath/Desktop/DSA/CP/Kotlin_Heores/T-shirt.cpp","tests":[{"id":1715100277683,"input":"6\nXXXS XS\nXXXL XL\nXL M\nXXL XXL\nXXXXXS M\nL M\n","output":"<\n>\n>\n=\n<\n>\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/somnath/Desktop/DSA/CP/Kotlin_Heores/T-shirt.cpp","group":"local","local":true}

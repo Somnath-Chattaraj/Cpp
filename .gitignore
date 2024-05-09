@@ -1,0 +1,12 @@
+# MacOS files
+.DS_Store
+
+# C++ build files
+build/
+*.o
+*.out
+
+# C++ library files
+lib/
+*.dylib
+*.a
