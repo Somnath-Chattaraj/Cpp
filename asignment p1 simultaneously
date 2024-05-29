@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int num, originalNum, remainder, n = 0, result = 0, sum = 0, i;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    originalNum = num;
+    while (originalNum != 0) {
+        n++;
+        originalNum /= 10; }
+    originalNum = num;
+    while (originalNum != 0) {
+        remainder = originalNum % 10;
+        result += pow(remainder, n);
+        originalNum /= 10;   }
+    if (result == num) {
+        printf("%d is an Armstrong number.\n", num);
+        for (i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;  }   }
+        if (sum == num) {
+            printf("It is also a Perfect number.\n");   }
+    } else if (sum == num) {
+        printf("%d is only a Perfect number.\n", num); 
+    } else {
+        printf("%d is neither an Armstrong nor a Perfect number.\n", num);   }
+    return 0; }
