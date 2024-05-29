@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int isPrime(int num) {
+    if (num <= 1) {
+        return 0; }
+    for (int i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return 0;  }   }
+    return 1; }
+int main() {
+    int num, potentialPrime1, potentialPrime2;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    if (num <= 0) {
+        printf("Sum of two primes is not applicable for non-positive numbers.\n");
+        return 1;    }
+    for (potentialPrime1 = 2; potentialPrime1 <= num / 2; potentialPrime1++) {
+        potentialPrime2 = num - potentialPrime1;
+        if (isPrime(potentialPrime1) && isPrime(potentialPrime2)) {
+            printf("%d can be expressed as the sum of two prime numbers: %d + %d\n", num, potentialPrime1, potentialPrime2);
+            return 0; // Found a sum of two primes, so exit    } }
+    printf("%d cannot be expressed as the sum of two prime numbers.\n", num);
+    return 0; }
