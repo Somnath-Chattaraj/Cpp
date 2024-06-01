@@ -1,0 +1,7 @@
+{
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "clang-analyzer-core.CallAndMessage",
+        "clang-diagnostic-unused-value"
+    ],
+    "C_Cpp.errorSquiggles": "disabled"
+}
