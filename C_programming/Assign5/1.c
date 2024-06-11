@@ -4,26 +4,25 @@
 
 char* capitalizeWords(char* str) {
     int length = strlen(str);
-    char* modifiedStr = malloc(length + 1); // Allocate memory for the modified string
-    int i;
-
-    for (i = 0; i < length; i++) {
-        if (i == 0 || str[i - 1] == ' ') {
-            modifiedStr[i] = toupper(str[i]);
-        } else {
-            modifiedStr[i] = str[i];
+    int i=0;
+    str[0] = toupper(str[0]);
+    for (i = 1; i < length; i++) {
+        if (str[i] == ' ') {
+            str[i + 1] = toupper(str[i + 1]);
         }
     }
-
-    modifiedStr[i] = '\0'; // Add null terminator to the end of the modified string
-
-    return modifiedStr;
+    printf("Modified string: %s\n", str);
+    // puts(str);
 }
 
 int main() {
-    char str[] = "hello world";
-    char* modifiedStr = capitalizeWords(str);
-    printf("Modified string: %s\n", modifiedStr);
-    free(modifiedStr); // Free the dynamically allocated memory
-    return 0;
+    // char str[] = "hello world";
+    // char* modifiedStr = capitalizeWords(str);
+    // printf("Modified string: %s\n", modifiedStr);
+    // free(modifiedStr); // Free the dynamically allocated memory
+    // return 0;
+    char str[100];
+    printf("Enter a string: ");
+    gets(str);
+    capitalizeWords(str);
 }
